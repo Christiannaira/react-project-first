@@ -4,11 +4,23 @@ function Car() {
     return (
         <>
 
-            <h2>Hi! I am Lamborghini!</h2>
+            <h2>Hi! I am <Brand/> </h2>
         
         </>
     )
 
+}
+
+
+function Brand(){
+    
+    return (
+        <>
+
+            Lamborghinis & Ferrari
+        
+        </>
+    )
 }
 
 
