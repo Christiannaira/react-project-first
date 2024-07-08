@@ -10,6 +10,16 @@ function State(){
         color: 'red'
     });
 
+    const updateColor = () => {
+
+        setCar(previousState => {
+            return {
+                ...previousState, color: "blue"
+            }
+        })
+
+    }
+
     return(
         <>
 
@@ -17,6 +27,9 @@ function State(){
         <p>
             It is a {car.color} {car.model} from {car.year}.
         </p>
+        <button type="button" onClick={updateColor}>
+            Blue
+        </button>
         
         </>
     )
