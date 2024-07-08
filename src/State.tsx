@@ -1,30 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 function State(){
 
-    const [color, setColor] = useState("red");
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+
+        setTimeout(
+            () => {
+
+                setCount((count) => count + 1);
+
+            }, 1000
+        );
+
+    })
+
 
     return(
         <>
-
-        <h1>My favorite color is {color}!</h1>
-
-        <button type="button" onClick={() => setColor("blue")}>
-            Blue
-        </button>
-
-        <button type="button" onClick={() => setColor("red")}>
-            Red
-        </button>
-
-        <button type="button" onClick={() => setColor("pink")}>
-            Pink
-        </button>
-
-        <button type="button" onClick={() => setColor("green")}>
-            Green
-        </button>
+    <h1>I have rendered {count} times!</h1>
         
         </>
     )
