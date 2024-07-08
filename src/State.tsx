@@ -15,7 +15,7 @@ function State(){
             }, 1000
         );
 
-    })
+    }, [])
 
 
     return(
