@@ -1,5 +1,6 @@
 import Car from './Car';
 import Honda from './Honda';
+import State from './State';
 
 function App() {
 
@@ -13,6 +14,8 @@ function App() {
     <Car/>
     <Honda/>
     </div>
+
+    <State/>
 
     </>
   )
