@@ -1,9 +1,8 @@
 
 function Conditional(props){
 
-    const isGoal = props.isGoal; 
 
-    if (isGoal) {
+    if (props.isGoal) {
         return <MadeGoal/>
     } 
 

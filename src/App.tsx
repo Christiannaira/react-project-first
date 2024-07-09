@@ -10,7 +10,7 @@ function App() {
 
 
     <div className="container mt-5 border">
-      <Conditional isGoal={"false"}/>
+      <Conditional isGoal={false}/>
     </div>
 
 
