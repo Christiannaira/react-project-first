@@ -9,7 +9,7 @@ function App() {
     <>
 
     <div className="container mt-5 border">
-      <Conditional isGoal={false}/>
+      <Conditional isGoal={true}/>
     </div>
 
     <div className="container bg-primary text-white mt-5 p-5">
@@ -37,6 +37,7 @@ function Garage(props){
         You have {cars.length} cars in your garage.
       </h2>
     }
+
     
     </>
   )

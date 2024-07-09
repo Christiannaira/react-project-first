@@ -1,13 +1,15 @@
 
 function Conditional(props){
 
+    const isGoal = props.isGoal;
 
-    if (props.isGoal) {
-        return <MadeGoal/>
-    } 
+    return (
+        <>
 
-    return <MissedGoal/>
+            {isGoal ? <MadeGoal/> : <MissedGoal/>}
 
+        </>
+    )
 
 }
 
