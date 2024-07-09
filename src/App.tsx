@@ -1,6 +1,7 @@
 import Car from './Car';
 import Honda from './Honda';
 import State from './State';
+import Styling from './Styling';
 
 function App() {
 
@@ -16,6 +17,11 @@ function App() {
     </div>
 
     <State/>
+
+    <div className="container mt-5 border">
+      <Styling/>
+    </div>
+
 
     </>
   )
