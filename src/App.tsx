@@ -1,25 +1,16 @@
-import Car from './Car';
-import Honda from './Honda';
-import State from './State';
-import Styling from './Styling';
+import Conditional from "./Conditional"
+
 
 function App() {
 
   return (
     <>
   
-    <div className="container">
-      
-    <h1>Installed Bootstrap Successfully</h1>
+   
 
-    <Car/>
-    <Honda/>
-    </div>
-
-    <State/>
 
     <div className="container mt-5 border">
-      <Styling/>
+      <Conditional isGoal={"false"}/>
     </div>
 
 
