@@ -1,34 +1,25 @@
-
+import Student from "./Student";
+import Navbar from "./Navbar";
 
 function App() {
 
-  const cars = [{
-    id: 1, brand: 'Ford'
-  },
-  {
-    id: 2, brand: 'BMW'
-  },
-  {
-    id: 3, brand: 'Audi'
-  }
-  ];
 
   return (
     <>
 
-    <h1>Who lives in my garage?</h1>
-    <ul>
-      {cars.map((car) => <Lists key={car.id} brand={car.brand} />)}
-    </ul>
- 
+      <div className="container m-5 p-5">
+
+    <Navbar/>
+    <Student firstname={'Christian'} lastname={'Naira'} />
+    <Student firstname={'Vicente'} lastname={'Naira'} />
+    <Student firstname={'Jewer'} lastname={'Naira'} />
+
+      </div>
+
     </>
   )
 }
 
-function Lists(props) {
 
-  return <li>I am a {props.brand}</li>
-
-}
 
 export default App
