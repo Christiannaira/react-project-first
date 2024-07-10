@@ -6,6 +6,11 @@ function App() {
 
   const [name, setName] = useState("");
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`The name you entered was: ${name}`);
+  }
+
   const students = [
     {
       firstname: 'John',
@@ -36,16 +41,16 @@ function App() {
 
       <div className="container m-5 p-5">
 
-    <form action="">
-        <label htmlFor="">Enter your name:
-          <input 
-          type="text" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          />
-        </label>
-    </form>
-    <h2>{name}</h2>
+        <form action="" onSubmit={handleSubmit}>
+            <label htmlFor="">Enter your name:
+              <input 
+              type="text" 
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              />
+            </label>
+            <input type="submit" />
+        </form>
 
       </div>
 
