@@ -2,11 +2,19 @@
 
 function App() {
 
+  const shoot = () => {
+
+    alert("Great Shot!");
+
+  }
+
 
   return (
     <>
 
-  hello world
+  <button onClick={shoot}>
+    Take the shot!
+  </button>
 
     </>
   )
