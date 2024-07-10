@@ -6,14 +6,14 @@ const student = {
 
 }
 
-function Student(props){
+function Student({firstname, lastname}){
 
     return(
         <>
             <div className="card my-3 bg-light shadow">
                 <div className="card-body">
-                    <p>First name: <span className="fw-bold">{props.firstname}</span></p>
-                    <p>Last name: <span className="fw-bold">{props.lastname}</span></p>
+                    <p>First name: <span className="fw-bold">{firstname}</span></p>
+                    <p>Last name: <span className="fw-bold">{lastname}</span></p>
                 </div>
             </div>
         </>
