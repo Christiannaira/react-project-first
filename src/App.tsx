@@ -4,36 +4,26 @@ import { useState } from "react";
 
 function App() {
 
-  const [name, setName] = useState("");
+  const [inputs, setInputs] = useState({});
+
+  const handleChange = (event) => {
+
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => (
+      {
+        ...values, [name]: value
+      }
+    ))
+
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`The name you entered was: ${name}`);
+    console.log(inputs);
   }
 
-  const students = [
-    {
-      firstname: 'John',
-      lastname: 'Smith',
-      grade: 28,
-    },
-    {
-      firstname: 'Mark',
-      lastname: 'Zuckerberger',
-      grade: 99,
-    },
-    {
-      firstname: 'Melon',
-      lastname: 'Musk',
-      grade: 60
-    }
-  ]
 
-  const studentList = students.map((item, id) => (
-
-    <Student key={id} firstname={item.firstname} lastname={item.lastname} grade={item.grade}/>
-
-  ))
 
 
   return (
@@ -44,13 +34,27 @@ function App() {
         <form action="" onSubmit={handleSubmit}>
             <label htmlFor="">Enter your name:
               <input 
-              type="text" 
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              type="text"
+              name="username" 
+              value={inputs.username || ""}
+              onChange={handleChange}
               />
             </label>
+
+            <label htmlFor="">Enter your age:
+              <input 
+              type="number" 
+              name="age"
+              value={inputs.age || ""}
+              onChange={handleChange}
+              />
+            </label>
+
             <input type="submit" />
         </form>
+
+    {inputs.username} <br />
+    {inputs.age}
 
       </div>
 
