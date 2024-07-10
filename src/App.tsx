@@ -1,7 +1,10 @@
 import Student from "./Student";
 import Navbar from "./Navbar";
+import { useState } from "react";
 
 function App() {
+
+  const [name, setName] = useState("");
 
   const students = [
     {
@@ -33,8 +36,16 @@ function App() {
 
       <div className="container m-5 p-5">
 
-    <Navbar/>
-    {studentList}
+    <form action="">
+        <label htmlFor="">Enter your name:
+          <input 
+          type="text" 
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+    </form>
+    <h2>{name}</h2>
 
       </div>
 
