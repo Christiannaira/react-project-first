@@ -7,21 +7,24 @@ function App() {
     {
       firstname: 'John',
       lastname: 'Smith',
+      grade: 28,
     },
     {
       firstname: 'Mark',
       lastname: 'Zuckerberger',
+      grade: 99,
     },
     {
       firstname: 'Melon',
-      lastname: 'Musk'
+      lastname: 'Musk',
+      grade: 60
     }
   ]
 
   const studentList = students.map((item, id) => (
 
-    <Student key={id} firstname={item.firstname} lastname={item.lastname}/>
-    
+    <Student key={id} firstname={item.firstname} lastname={item.lastname} grade={item.grade}/>
+
   ))
 
 
