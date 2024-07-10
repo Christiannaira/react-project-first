@@ -2,9 +2,9 @@
 
 function App() {
 
-  const shoot = (a) => {
+  const shoot = (a, b) => {
 
-    alert(a);
+    alert(b.type);
 
   }
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
 
-  <button onClick={() => shoot("Goal!")}>
+  <button onClick={(event) => shoot("Goal!", event)}>
     Take the shot!
   </button>
 
